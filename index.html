@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>يوسف الطيار | خبير التشغيل وتطوير المشاريع</title>
-    <meta name="description" content="يوسف الطيار - متخصص في تشغيل وتطوير المقاهي والمشاريع، بناء الأنظمة التشغيلية، وإدارة الفرق.">
+    <title>يوسف الطيار | مهندس برمجيات & شريك نجاح للكوفيهات</title>
+    <meta name="description" content="يوسف الطيار - مهندس برمجيات، مطوّر أنظمة مخازن وحسابات للكوفيهات، شريك نجاح لأصحاب الكوفيهات والبارستات، وتاجر معدات كوفيهات.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -26,12 +26,12 @@
                     },
                     fontFamily: {
                         'cairo': ['Cairo', 'sans-serif'],
-                        'naskh': ['Noto Naskh Arabic', 'serif'],
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                         'fade-in': 'fadeIn 1s ease-out forwards',
                         'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
                     },
                     keyframes: {
                         fadeInUp: {
@@ -52,7 +52,12 @@
         }
     </script>
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #0D0D0D; color: #E5E5E5; overflow-x: hidden; }
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: #0D0D0D; 
+            color: #E5E5E5; 
+            overflow-x: hidden; 
+        }
         .navy-gradient-text {
             background: linear-gradient(135deg, #1E3A5F 0%, #3D6A9F 50%, #1E3A5F 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -63,89 +68,95 @@
                         radial-gradient(ellipse at bottom left, rgba(26, 26, 26, 0.8) 0%, transparent 50%),
                         linear-gradient(180deg, #0D0D0D 0%, #1A1A1A 100%);
         }
-        .noise-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: 9999; opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
         .glass-card {
-            background: rgba(26, 26, 26, 0.6); backdrop-filter: blur(20px);
-            border: 1px solid rgba(30, 58, 95, 0.1); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(26, 26, 26, 0.6); 
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(30, 58, 95, 0.1); 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .glass-card:hover { border-color: rgba(30, 58, 95, 0.3); box-shadow: 0 20px 40px rgba(30, 58, 95, 0.1); transform: translateY(-5px); }
-        .timeline-line { background: linear-gradient(180deg, #1E3A5F 0%, rgba(30, 58, 95, 0.2) 100%); }
-        .timeline-dot { box-shadow: 0 0 20px rgba(30, 58, 95, 0.5); }
-        .scroll-reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .scroll-reveal.active { opacity: 1; transform: translateY(0); }
-        .counter-value { font-variant-numeric: tabular-nums; }
-        .service-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .service-card:hover { transform: translateY(-10px); }
-        .quote-mark { font-family: 'Noto Naskh Arabic', serif; font-size: 6rem; line-height: 1; opacity: 0.2; }
-        .nav-blur { backdrop-filter: blur(20px); background: rgba(13, 13, 13, 0.85); }
+        .glass-card:hover { 
+            border-color: rgba(30, 58, 95, 0.3); 
+            box-shadow: 0 20px 40px rgba(30, 58, 95, 0.1); 
+            transform: translateY(-5px); 
+        }
         .btn-primary {
             background: linear-gradient(135deg, #1E3A5F 0%, #0F1F3A 100%);
             transition: all 0.3s ease;
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3); }
+        .btn-primary:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3); 
+        }
         .btn-outline {
-            border: 1px solid rgba(30, 58, 95, 0.5); transition: all 0.3s ease;
+            border: 1px solid rgba(30, 58, 95, 0.5); 
+            transition: all 0.3s ease;
         }
-        .btn-outline:hover { background: rgba(30, 58, 95, 0.1); border-color: #1E3A5F; }
-        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(30, 58, 95, 0.3) 50%, transparent 100%); }
-        .glow-text { text-shadow: 0 0 40px rgba(30, 58, 95, 0.3); }
-        .img-placeholder {
-            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
-            position: relative; overflow: hidden;
+        .btn-outline:hover { 
+            background: rgba(30, 58, 95, 0.1); 
+            border-color: #1E3A5F; 
         }
-        .img-placeholder::before {
-            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-            background: linear-gradient(45deg, transparent 30%, rgba(30, 58, 95, 0.05) 50%, transparent 70%);
-            animation: shimmer 3s infinite;
-        }
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        .glow-text { 
+            text-shadow: 0 0 40px rgba(30, 58, 95, 0.3); 
         }
         .floating-shape {
-            position: absolute; border-radius: 50%;
+            position: absolute; 
+            border-radius: 50%;
             background: radial-gradient(circle, rgba(30, 58, 95, 0.1) 0%, transparent 70%);
             animation: float 8s ease-in-out infinite;
         }
-        .testimonial-card {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(45, 45, 45, 0.6) 100%);
-            border: 1px solid rgba(30, 58, 95, 0.15); transition: all 0.3s ease;
+        .social-btn { 
+            transition: all 0.3s ease; 
         }
-        .testimonial-card:hover { border-color: rgba(30, 58, 95, 0.4); }
-        .social-btn { transition: all 0.3s ease; }
-        .social-btn:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(30, 58, 95, 0.2); }
+        .social-btn:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 5px 20px rgba(30, 58, 95, 0.2); 
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0D0D0D; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #1E3A5F; }
-        .loading-screen {
-            position: fixed; inset: 0; background: #0D0D0D; z-index: 10000;
-            display: flex; align-items: center; justify-content: center;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+        .section-divider { 
+            height: 1px; 
+            background: linear-gradient(90deg, transparent 0%, rgba(30, 58, 95, 0.3) 50%, transparent 100%); 
         }
-        .loading-screen.hidden { opacity: 0; visibility: hidden; }
-        .loader { width: 60px; height: 60px; border: 2px solid rgba(30, 58, 95, 0.1); border-top-color: #1E3A5F; border-radius: 50%; animation: spin 1s linear infinite; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .brand-logo { filter: grayscale(100%) opacity(0.5); transition: all 0.3s ease; }
-        .brand-logo:hover { filter: grayscale(0%) opacity(1); }
+        .service-card { 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .service-card:hover { 
+            transform: translateY(-10px); 
+        }
+        .scroll-reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); 
+        }
+        .scroll-reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        .nav-blur { 
+            backdrop-filter: blur(20px); 
+            background: rgba(13, 13, 13, 0.85); 
+        }
+        .counter-value { 
+            font-variant-numeric: tabular-nums; 
+        }
+        .network-card {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.08) 0%, rgba(26, 26, 26, 0.6) 100%);
+            border: 1px solid rgba(30, 58, 95, 0.15);
+        }
+        .network-card:hover {
+            border-color: rgba(30, 58, 95, 0.4);
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.12) 0%, rgba(26, 26, 26, 0.7) 100%);
+        }
+        .tag-badge {
+            background: rgba(30, 58, 95, 0.15);
+            border: 1px solid rgba(30, 58, 95, 0.2);
+        }
     </style>
 <base target="_blank">
 </head>
 <body class="antialiased">
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="text-center">
-            <div class="loader mx-auto mb-4"></div>
-            <p class="text-navy-300 text-sm tracking-widest">يوسف الطيار</p>
-        </div>
-    </div>
-
-    <!-- Noise Overlay -->
-    <div class="noise-overlay"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-charcoal-800/50" id="navbar">
@@ -153,12 +164,11 @@
             <div class="flex items-center justify-between">
                 <a href="#" class="text-xl font-bold navy-gradient-text tracking-wide">يوسف الطيار</a>
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#value" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">القيمة</a>
-                    <a href="#trust" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">الثقة</a>
-                    <a href="#experience" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">الخبرة</a>
-                    <a href="#mindset" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">الفلسفة</a>
+                    <a href="#about" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">نبذة</a>
+                    <a href="#network" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">شبكتي</a>
                     <a href="#services" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">الخدمات</a>
-                    <a href="#contact" class="btn-primary px-6 py-2 rounded-full text-charcoal-950 text-sm font-semibold">تواصل معي</a>
+                    <a href="#journey" class="text-charcoal-300 hover:text-navy-300 transition-colors text-sm">مسيرتي</a>
+                    <a href="#contact" class="btn-primary px-6 py-2 rounded-full text-charcoal-950 text-sm font-semibold">تواصل وياي</a>
                 </div>
                 <button class="md:hidden text-navy-300" id="mobileMenuBtn">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,12 +179,11 @@
         </div>
         <div class="md:hidden hidden bg-charcoal-950/95 backdrop-blur-xl border-t border-charcoal-800" id="mobileMenu">
             <div class="px-6 py-4 space-y-4">
-                <a href="#value" class="block text-charcoal-300 hover:text-navy-300 transition-colors">القيمة</a>
-                <a href="#trust" class="block text-charcoal-300 hover:text-navy-300 transition-colors">الثقة</a>
-                <a href="#experience" class="block text-charcoal-300 hover:text-navy-300 transition-colors">الخبرة</a>
-                <a href="#mindset" class="block text-charcoal-300 hover:text-navy-300 transition-colors">الفلسفة</a>
+                <a href="#about" class="block text-charcoal-300 hover:text-navy-300 transition-colors">نبذة</a>
+                <a href="#network" class="block text-charcoal-300 hover:text-navy-300 transition-colors">شبكتي</a>
                 <a href="#services" class="block text-charcoal-300 hover:text-navy-300 transition-colors">الخدمات</a>
-                <a href="#contact" class="block btn-primary px-6 py-2 rounded-full text-charcoal-950 text-center font-semibold">تواصل معي</a>
+                <a href="#journey" class="block text-charcoal-300 hover:text-navy-300 transition-colors">مسيرتي</a>
+                <a href="#contact" class="block btn-primary px-6 py-2 rounded-full text-charcoal-950 text-center font-semibold">تواصل وياي</a>
             </div>
         </div>
     </nav>
@@ -183,51 +192,50 @@
     <section class="relative min-h-screen flex items-center hero-bg overflow-hidden pt-20">
         <div class="floating-shape w-96 h-96 -top-20 -right-20 opacity-30"></div>
         <div class="floating-shape w-64 h-64 bottom-20 left-10 opacity-20" style="animation-delay: -2s;"></div>
-        <div class="floating-shape w-48 h-48 top-1/2 right-1/4 opacity-15" style="animation-delay: -4s;"></div>
 
         <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1">
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-500/10 border border-navy-500/20 mb-8 animate-fade-in">
                         <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
-                        <span class="text-navy-200 text-sm">خبير التشغيل وتطوير المشاريع</span>
+                        <span class="text-navy-200 text-sm">مهندس برمجيات & شريك نجاح للكوفيهات</span>
                     </div>
 
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.2s;">
-                        <span class="text-charcoal-100">أطوّر المشاريع</span><br>
-                        <span class="navy-gradient-text glow-text">من الداخل</span>
+                        <span class="text-charcoal-100">من البار</span><br>
+                        <span class="navy-gradient-text glow-text">للكود</span>
                     </h1>
 
                     <p class="text-lg md:text-xl text-charcoal-400 leading-relaxed mb-10 max-w-xl animate-fade-in-up" style="animation-delay: 0.4s;">
-                        يوسف الطيار متخصص في تشغيل وتطوير المشاريع، إدارة الفرق، تحسين الأداء، وبناء الأنظمة التشغيلية للمقاهي والأعمال.
+                        تخرجت بكالوريوس هندسة برمجيات، وبديت أطوّر <strong class="text-navy-300">أنظمة مخازن وحسابات</strong> للكوفيهات بناءً على 6 سنين خبرة بإدارتها. <strong class="text-navy-300">شريك نجاح</strong> لأصحاب الكوفيهات والبارستات، وعندي شبكة علاقات واسعة بالسوق.
                     </p>
 
                     <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.6s;">
                         <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-charcoal-950 font-bold text-lg inline-flex items-center gap-2">
-                            تواصل معي
+                            تواصل وياي
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                         </a>
-                        <a href="#experience" class="btn-outline px-8 py-4 rounded-full text-navy-300 font-semibold text-lg">
-                            شاهد خبراتي
+                        <a href="youssef_tayyar_full.html" class="btn-outline px-8 py-4 rounded-full text-navy-300 font-semibold text-lg">
+                            تعرف عليّ أكثر
                         </a>
                     </div>
 
                     <div class="mt-16 flex items-center gap-8 animate-fade-in" style="animation-delay: 0.8s;">
                         <div class="text-center">
                             <div class="text-3xl font-bold navy-gradient-text counter-value" data-target="6">0</div>
-                            <div class="text-charcoal-500 text-sm mt-1">سنوات خبرة</div>
+                            <div class="text-charcoal-500 text-sm mt-1">سنين بالسوق</div>
                         </div>
                         <div class="w-px h-12 bg-charcoal-800"></div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold navy-gradient-text counter-value" data-target="7">0</div>
-                            <div class="text-charcoal-500 text-sm mt-1">مشاريع مطوّرة</div>
+                            <div class="text-3xl font-bold navy-gradient-text">+50</div>
+                            <div class="text-charcoal-500 text-sm mt-1">علاقة بسوق القهوة</div>
                         </div>
                         <div class="w-px h-12 bg-charcoal-800"></div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold navy-gradient-text counter-value" data-target="10">0</div>
-                            <div class="text-charcoal-500 text-sm mt-1">فرق مدرّبة</div>
+                            <div class="text-3xl font-bold navy-gradient-text">∞</div>
+                            <div class="text-charcoal-500 text-sm mt-1">نظام قيد التطوير</div>
                         </div>
                     </div>
                 </div>
@@ -235,16 +243,24 @@
                 <div class="order-1 lg:order-2 relative animate-fade-in" style="animation-delay: 0.4s;">
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-br from-navy-500/20 to-transparent rounded-3xl blur-3xl"></div>
-                        <div class="img-placeholder rounded-3xl aspect-[4/5] max-w-md mx-auto relative border border-charcoal-800">
+                        <div class="relative rounded-3xl aspect-[4/5] max-w-md mx-auto border border-charcoal-800 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-navy-600/20 via-charcoal-900 to-charcoal-950"></div>
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <div class="text-center">
-                                    <div class="w-24 h-24 rounded-full bg-navy-500/10 border-2 border-navy-500/30 mx-auto mb-4 flex items-center justify-center">
-                                        <svg class="w-12 h-12 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    <div class="w-28 h-28 rounded-full bg-navy-500/10 border-2 border-navy-500/30 mx-auto mb-4 flex items-center justify-center animate-pulse-slow">
+                                        <svg class="w-14 h-14 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                                         </svg>
                                     </div>
-                                    <p class="text-charcoal-500 text-sm">الصورة الشخصية</p>
+                                    <p class="text-navy-300 font-bold text-lg">يوسف الطيار</p>
+                                    <p class="text-charcoal-500 text-sm mt-1">Software Engineer</p>
+                                    <p class="text-charcoal-600 text-xs mt-2">Coffee Systems & Partners</p>
                                 </div>
+                            </div>
+                            <div class="absolute bottom-8 left-8 right-8 space-y-2 opacity-30">
+                                <div class="h-1 bg-navy-500/40 rounded w-3/4"></div>
+                                <div class="h-1 bg-navy-500/30 rounded w-1/2"></div>
+                                <div class="h-1 bg-navy-500/20 rounded w-5/6"></div>
                             </div>
                         </div>
                         <div class="absolute -bottom-6 -left-6 w-32 h-32 border border-navy-500/20 rounded-2xl"></div>
@@ -261,366 +277,165 @@
         </div>
     </section>
 
-    <!-- Quick Value Section -->
-    <section id="value" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">القيمة المضافة</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">ما الذي أقدمه لعملك؟</h2>
-                <p class="text-charcoal-400 max-w-2xl mx-auto">حلول تشغيلية متكاملة تحول المشاريع من الفوضى إلى منظومة واضحة وقابلة للنمو</p>
+    <!-- About / Who I Am Section -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12 scroll-reveal">
+                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">نبذة سريعة</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">منو أنا؟</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
+            <div class="glass-card rounded-3xl p-8 md:p-12 scroll-reveal">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-navy-500/10 flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal-100">مهندس برمجيات</h3>
+                        <p class="text-charcoal-400 text-sm leading-relaxed">حديث التخرج بكالوريوس هندسة برمجيات، أطوّر أنظمة مخازن وحسابات متخصصة للكوفيهات</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-navy-500/10 flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal-100">شريك نجاح</h3>
+                        <p class="text-charcoal-400 text-sm leading-relaxed">شريك بأحد الكوفيهات ومتعاون ويا أصحاب كوفيات وبارستات وتجار — شبكة علاقات واسعة بالسوق</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-navy-500/10 flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal-100">تاجر معدات</h3>
+                        <p class="text-charcoal-400 text-sm leading-relaxed">أشتغل بتجارة مكائن القهوة والمواد الخام والمعدات — واصل بالسوق من كل الجهات</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-charcoal-800 text-center">
+                    <p class="text-charcoal-300 text-lg leading-relaxed mb-6">
+                        "ما جاي أطوّر أنظمة من برا — <span class="text-navy-300 font-bold">أنا داخل السوق</span>. عشت مشاكل المخزون والحسابات والتكاليف، وهسة أبني الحلول اللي كنت أتمناها."
+                    </p>
+                    <a href="youssef_tayyar_full.html" class="btn-outline px-8 py-3 rounded-full text-navy-300 font-semibold inline-flex items-center gap-2">
+                        اقرأ قصتي الكاملة
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Network Section -->
+    <section id="network" class="py-24 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">شبكة العلاقات</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">موصول بالسوق من كل الجهات</h2>
+                <p class="text-charcoal-400 max-w-2xl mx-auto">علاقات واسعة بسوق القهوة تخلّيني أفهم السوق من الداخل — مو من النظريات</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="network-card rounded-2xl p-6 text-center scroll-reveal">
+                    <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">إدارة وتشغيل المقاهي</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">تشغيل شامل للمقاهي من الألف إلى الياء، مع بناء أنظمة عمل فعالة تضمن استمرارية النجاح</p>
+                    <h3 class="text-lg font-bold text-charcoal-100 mb-2">أصحاب كوفيات</h3>
+                    <p class="text-charcoal-400 text-sm">علاقات مباشرة ويا أصحاب كوفيات بالموصل وبراها — أفهم مشاكلهم اليومية</p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group" style="transition-delay: 0.1s;">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
+                <div class="network-card rounded-2xl p-6 text-center scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">تطوير الأنظمة التشغيلية</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">بناء وتحسين الأنظمة الداخلية التي تجعل العمل سلساً وقابلاً للتكرار والتوسع</p>
+                    <h3 class="text-lg font-bold text-charcoal-100 mb-2">بارستات محترفين</h3>
+                    <p class="text-charcoal-400 text-sm">تواصل ويا بارستات وتقنيين — أعرف التفاصيل التقنية والتشغيلية من المصدر</p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group" style="transition-delay: 0.2s;">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                        <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">تدريب وإدارة الفرق</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">تدريب الفرق على أعلى مستويات الكفاءة وبناء ثقافة عمل احترافية داخل المؤسسة</p>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                        <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">إدارة مالية ومحاسبية</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">إدارة التدفقات المالية والتكاليف بشكل احترافي لضمان ربحية المشروع واستدامته</p>
-                </div>
-
-                
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group" style="transition-delay: 0.2s;">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                        <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">بناء الهوية التشغيلية</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">صياغة هوية تشغيلية فريدة للمشروع تميزه في السوق وتبني قيمة علامة تجارية قوية</p>
-                </div>
-
-                
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group" style="transition-delay: 0.1s;">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
+                <div class="network-card rounded-2xl p-6 text-center scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">إدارة المشتريات والموردين</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">بناء علاقات استراتيجية مع الموردين وإدارة المشتريات بكفاءة عالية لتقليل التكاليف</p>
+                    <h3 class="text-lg font-bold text-charcoal-100 mb-2">تجار وموردين</h3>
+                    <p class="text-charcoal-400 text-sm">علاقات ويا تجار المعدات والمواد الخام — أجيب لك أفضل الأسعار والجودة</p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group" style="transition-delay: 0.2s;">
-                    <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
+                <div class="network-card rounded-2xl p-6 text-center scroll-reveal" style="transition-delay: 0.3s;">
+                    <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-charcoal-100 mb-3">تحليل مشاكل المشاريع</h3>
-                    <p class="text-charcoal-400 text-sm leading-relaxed">تشخيص دقيق للمشاكل التشغيلية وتقديم حلول عملية قابلة للتنفيذ الفوري</p>
+                    <h3 class="text-lg font-bold text-charcoal-100 mb-2">صيانة مكائن القهوة</h3>
+                    <p class="text-charcoal-400 text-sm">تعامل ويا أجهزة القهوة وعيارها وصيانتها الشاملة — من الإسبريسو للطواحين</p>
                 </div>
+            </div>
 
-                
+            <div class="glass-card rounded-2xl p-8 scroll-reveal">
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">كوفيهات الموصل</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">بارستا محترفين</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">تجار مكائن</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">موردين مواد خام</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">أصحاب مشاريع</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">فنيين صيانة</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">مصممين هوية</span>
+                    <span class="tag-badge px-4 py-2 rounded-full text-navy-300 text-sm">مسوقين</span>
+                </div>
+                <p class="text-charcoal-400 text-center text-sm mt-6">
+                    هاي الشبكة تخلّيني أساعدك بأي شي تحتاجه — من فكرة الكوفي لحد افتتاحه وتشغيله
+                </p>
             </div>
         </div>
     </section>
 
     <div class="section-divider max-w-4xl mx-auto"></div>
-
-    <!-- Why People Trust Me Section -->
-    <section id="trust" class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-charcoal-950 via-charcoal-900/50 to-charcoal-950"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16 scroll-reveal">
-                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">لماذا يثق بي الآخرون</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">خبرة حقيقية في سوق حقيقي</h2>
-                <p class="text-charcoal-400 max-w-2xl mx-auto">ليس مجرد نظريات، بل نتائج ملموسة في مشاريع حقيقية</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                <div class="scroll-reveal">
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-charcoal-900/50 border border-charcoal-800 hover:border-navy-500/30 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-charcoal-100 mb-2">خبرة فعلية داخل مشاريع حقيقية</h3>
-                                <p class="text-charcoal-400 text-sm leading-relaxed">عملت داخل مشاريع متنوعة في سوق القهوة والتشغيل، مما منحني فهماً عميقاً للتحديات الفعلية</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-charcoal-900/50 border border-charcoal-800 hover:border-navy-500/30 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-charcoal-100 mb-2">تعامل مباشر مع فرق وعملاء وموردين</h3>
-                                <p class="text-charcoal-400 text-sm leading-relaxed">خبرة في إدارة العلاقات المعقدة وبناء جسور التواصل بين جميع الأطراف لضمان سير العمل</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-charcoal-900/50 border border-charcoal-800 hover:border-navy-500/30 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-charcoal-100 mb-2">فهم عميق لسوق المقاهي والمشاريع</h3>
-                                <p class="text-charcoal-400 text-sm leading-relaxed">معرفة تفصيلية بمتطلبات السوق واتجاهاته، مما يتيح اتخاذ قرارات استراتيجية دقيقة</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-charcoal-900/50 border border-charcoal-800 hover:border-navy-500/30 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-charcoal-100 mb-2">القدرة على حل المشاكل التشغيلية</h3>
-                                <p class="text-charcoal-400 text-sm leading-relaxed">نهج تحليلي في مواجهة التحديات مع القدرة على تقديم حلول عملية وسريعة</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-6 rounded-2xl bg-charcoal-900/50 border border-charcoal-800 hover:border-navy-500/30 transition-colors">
-                            <div class="w-12 h-12 rounded-xl bg-navy-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-charcoal-100 mb-2">عقلية تطوير وليس مجرد تنفيذ</h3>
-                                <p class="text-charcoal-400 text-sm leading-relaxed">أفكر في المستقبل وأبني أسساً للنمو المستدام، لا أكتفي بحل المشاكل الحالية فقط</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="scroll-reveal">
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="glass-card rounded-2xl p-8 text-center">
-                            <div class="text-5xl font-black navy-gradient-text mb-2 counter-value" data-target="6">0</div>
-                            <div class="text-charcoal-400 text-sm">سنوات خبرة</div>
-                        </div>
-                        <div class="glass-card rounded-2xl p-8 text-center">
-                            <div class="text-5xl font-black navy-gradient-text mb-2 counter-value" data-target="7">0</div>
-                            <div class="text-charcoal-400 text-sm">مشاريع مطوّرة</div>
-                        </div>
-                        <div class="glass-card rounded-2xl p-8 text-center">
-                            <div class="text-5xl font-black navy-gradient-text mb-2 counter-value" data-target="10">0</div>
-                            <div class="text-charcoal-400 text-sm">فرق مدرّبة</div>
-                        </div>
-                        <div class="glass-card rounded-2xl p-8 text-center">
-                            <div class="text-5xl font-black navy-gradient-text mb-2 counter-value" data-target="30">0</div>
-                            <div class="text-charcoal-400 text-sm">حملة تسويقية ناجحة</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider max-w-4xl mx-auto"></div>
-
-    <!-- Experience Timeline -->
-    <!-- Experience Section -->
-        <!-- Experience Section -->
-    <section id="experience" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">مسار الخبرة</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">رحلة التطور المهني</h2>
-                <p class="text-charcoal-400 max-w-2xl mx-auto">محطات مهنية بنت خبرة متكاملة في التشغيل والتطوير</p>
-            </div>
-
-            <div class="relative">
-                <!-- Timeline Line -->
-                <div class="absolute right-8 md:right-1/2 top-0 bottom-0 w-px timeline-line md:transform md:translate-x-px"></div>
-
-                <!-- Timeline Items -->
-                <div class="space-y-12">
-                    <!-- Item 1: Current - Dark Cafe -->
-                    <div class="relative scroll-reveal">
-                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                            <div class="md:text-left pr-20 md:pr-0 md:pl-12">
-                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500 md:border-l-0 md:border-r-4 md:border-r-navy-500">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-navy-500/10 border border-navy-500/20 text-navy-300 text-xs font-semibold">
-                                            <span class="w-2 h-2 rounded-full bg-navy-300 animate-pulse"></span>
-                                            الحاضر
-                                        </span>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-3">إدارة كوفي دارك كافيه</h3>
-                                    <p class="text-charcoal-400 text-sm leading-relaxed mb-3">إدارة تشغيلية شاملة للكوفي مع بناء الأنظمة التشغيلية وتطوير تجربة العميل وإدارة الفريق.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">الأنظمة التشغيلية</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">تجربة العميل</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">إدارة الفريق</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hidden md:block"></div>
-                        </div>
-                        <div class="absolute right-4 md:right-1/2 top-6 w-9 h-9 rounded-full bg-charcoal-900 border-4 border-navy-500 timeline-dot md:transform md:translate-x-1/2 z-10"></div>
-                    </div>
-
-                    <!-- Item 2: Current - Coffee Equipment -->
-                    <div class="relative scroll-reveal">
-                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                            <div class="hidden md:block"></div>
-                            <div class="pr-20 md:pr-0 md:pl-12">
-                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-navy-500/10 border border-navy-500/20 text-navy-300 text-xs font-semibold">
-                                            <span class="w-2 h-2 rounded-full bg-navy-300 animate-pulse"></span>
-                                            الحاضر
-                                        </span>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-3">تجهيز الكوفيهات والمطاعم</h3>
-                                    <p class="text-charcoal-400 text-sm leading-relaxed mb-3">تجهيز الأدوات والمكائن والمواد الخام، مع التركيز على الدعم الفني لصيانة مكائن الإسبريسو الاحترافية وتوفير معدات الباريستا التخصصية.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">تجهيز المكائن</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">صيانة الإسبريسو</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">معدات الباريستا</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">المواد الخام</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute right-4 md:right-1/2 top-6 w-9 h-9 rounded-full bg-charcoal-900 border-4 border-navy-500 timeline-dot md:transform md:translate-x-1/2 z-10"></div>
-                    </div>
-
-                    <!-- Item 3: Nakhla Media Agency -->
-                    <div class="relative scroll-reveal">
-                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                            <div class="md:text-left pr-20 md:pr-0 md:pl-12">
-                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500 md:border-l-0 md:border-r-4 md:border-r-navy-500">
-                                    <span class="text-navy-300 text-sm font-semibold">سابقاً</span>
-                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-3">شركة نخلة (Media Agency) — تطوير البراندنك</h3>
-                                    <p class="text-charcoal-400 text-sm leading-relaxed mb-3">تطوير البراندنك للكوفيهات والمطاعم في الموصل، مع بناء هويات تجارية متكاملة تعكس جوهر كل علامة.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">Branding</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">الهوية التجارية</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">مدينة الموصل</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hidden md:block"></div>
-                        </div>
-                        <div class="absolute right-4 md:right-1/2 top-6 w-9 h-9 rounded-full bg-charcoal-900 border-4 border-navy-500 timeline-dot md:transform md:translate-x-1/2 z-10"></div>
-                    </div>
-
-                    <!-- Item 4: Chef Ahmed Al-Swedi Restaurant -->
-                    <div class="relative scroll-reveal">
-                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                            <div class="hidden md:block"></div>
-                            <div class="pr-20 md:pr-0 md:pl-12">
-                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500">
-                                    <span class="text-navy-300 text-sm font-semibold">سابقاً</span>
-                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-3">مطعم الشيف أحمد السويدي — تطوير البار</h3>
-                                    <p class="text-charcoal-400 text-sm leading-relaxed mb-3">تطوير منيو مشروبات و System Operation Bar، بناء نظام تشغيلي متكامل للبار لضمان جودة متسقة وكفاءة عالية.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">Beverage Menu</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">System Operation Bar</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">تطوير القوائم</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute right-4 md:right-1/2 top-6 w-9 h-9 rounded-full bg-charcoal-900 border-4 border-navy-500 timeline-dot md:transform md:translate-x-1/2 z-10"></div>
-                    </div>
-
-                    <!-- Item 5: Mad Agency -->
-                    <div class="relative scroll-reveal">
-                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                            <div class="md:text-left pr-20 md:pr-0 md:pl-12">
-                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500 md:border-l-0 md:border-r-4 md:border-r-navy-500">
-                                    <span class="text-navy-300 text-sm font-semibold">سابقاً</span>
-                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-3">وكالة Mad Agency — المحتوى الطبي</h3>
-                                    <p class="text-charcoal-400 text-sm leading-relaxed mb-3">صناعة محتوى في المجال الطبي بأسلوب يجمع بين الدقة العلمية والجاذبية التسويقية، مما يعزز الثقة ويبني حضوراً رقمياً مؤثراً.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">المحتوى الطبي</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">صناعة المحتوى</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">القطاع الصحي</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hidden md:block"></div>
-                        </div>
-                        <div class="absolute right-4 md:right-1/2 top-6 w-9 h-9 rounded-full bg-charcoal-900 border-4 border-navy-500 timeline-dot md:transform md:translate-x-1/2 z-10"></div>
-                    </div>
-
-                    <!-- Item 6: Multaqa Al-Kitab -->
-                    <div class="relative scroll-reveal">
-                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                            <div class="hidden md:block"></div>
-                            <div class="pr-20 md:pr-0 md:pl-12">
-                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500">
-                                    <span class="text-navy-300 text-sm font-semibold">سابقاً</span>
-                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-3">مؤسسة ملتقى الكتاب </h3>
-                                    <p class="text-charcoal-400 text-sm leading-relaxed mb-3">خبرة 6 سنوات في زيادة مبيعات الكتب وزيادة الوصول في السوشل ميديا، مع بناء استراتيجيات انتشار فعالة وجمهور متفاعل.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">زيادة المبيعات</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">السوشل ميديا</span>
-                                        <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">6 سنوات خبرة</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute right-4 md:right-1/2 top-6 w-9 h-9 rounded-full bg-charcoal-900 border-4 border-navy-500 timeline-dot md:transform md:translate-x-1/2 z-10"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider max-w-4xl mx-auto"></div>
-
-    <!-- Business Mindset Section -->
-    
 
     <!-- Services Section -->
     <section id="services" class="py-24 relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 scroll-reveal">
-                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">الخدمات الاحترافية</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">حلول تشغيلية متكاملة</h2>
-                <p class="text-charcoal-400 max-w-2xl mx-auto">خدمات مصممة لتحويل مشروعك إلى منظومة ناجحة ومستدامة</p>
+                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">الخدمات الحالية</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">شنو أقدم الحين؟</h2>
+                <p class="text-charcoal-400 max-w-2xl mx-auto">ثلاثة محاور أساسية — تقنية، تشغيلية، وتجارية</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
+                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">أنظمة مخازن وانظمة حسابات</h3>
+                        <p class="text-charcoal-400 text-sm leading-relaxed mb-4">أنظمة برمجية خفيفة وعملية: متابعة المخزون، تكاليف الوصفة، الربحية، والتقارير المالية</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">مخزون</span>
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">حسابات</span>
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">تكاليف</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden" style="transition-delay: 0.1s;">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
@@ -628,21 +443,13 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">تطوير وتشغيل المقاهي</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">تشغيل شامل للمقاهي من مرحلة التأسيس حتى الاستقرار التشغيلي مع بناء جميع الأنظمة</p>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden" style="transition-delay: 0.1s;">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
+                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">تشغيل وتطوير الكوفيهات</h3>
+                        <p class="text-charcoal-400 text-sm leading-relaxed mb-4">بناء الأنظمة التشغيلية، تدريب الفرق، تحسين الأداء، وتطوير تجربة العميل</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">أنظمة</span>
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">فرق</span>
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">تطوير</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">استشارات تشغيل وإدارة</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">تقديم استشارات متخصصة في التشغيل والإدارة لتحسين الأداء وحل المشاكل التشغيلية</p>
                     </div>
                 </div>
 
@@ -651,132 +458,102 @@
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
                             <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">بناء أنظمة العمل</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">تصميم وبناء أنظمة عمل متكاملة تضمن استمرارية العمل وقابلية التوسع المستقبلي</p>
+                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">تجارة المعدات والمواد</h3>
+                        <p class="text-charcoal-400 text-sm leading-relaxed mb-4">توفير مكائن الإسبريسو، معدات الباريستا، والمواد الخام بأسعار تنافسية</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">مكائن</span>
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">مواد خام</span>
+                            <span class="px-3 py-1 rounded-full bg-charcoal-800/50 text-charcoal-300 text-xs">صيانة</span>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">تطوير تجربة العميل</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">تصميم رحلة العميل الكاملة لضمان تجربة استثنائية تبني ولاءً دائماً وزيادة في القيمة</p>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden" style="transition-delay: 0.1s;">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">إدارة الفرق والتدريب</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">بناء فرق عمل احترافية وتدريبها على أعلى مستويات الأداء والكفاءة التشغيلية</p>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden" style="transition-delay: 0.2s;">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">تحسين الأداء البيعي</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">زيادة المبيعات من خلال تحسين عمليات البيع وبناء استراتيجيات نمو مستدامة</p>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">إدارة السوشيال ميديا للمشاريع</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">استراتيجيات محتوى مدروسة وبناء حضور رقمي قوي يجذب العملاء المناسبين</p>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden" style="transition-delay: 0.1s;">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">بناء الهوية التشغيلية</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">صياغة هوية تشغيلية فريدة للمشروع تميزه في السوق وتبني قيمة علامة تجارية قوية</p>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl p-8 scroll-reveal service-card group relative overflow-hidden" style="transition-delay: 0.2s;">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-navy-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-navy-500/10 flex items-center justify-center mb-6 group-hover:bg-navy-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-charcoal-100 mb-3">تنظيم المشتريات والتكاليف</h3>
-                        <p class="text-charcoal-400 text-sm leading-relaxed">إدارة المشتريات والتكاليف بكفاءة عالية لضمان ربحية المشروع واستدامته المالية</p>
-                    </div>
-                </div>
+            <div class="mt-12 text-center scroll-reveal">
+                <a href="youssef_tayyar_full.html#services" class="btn-outline px-8 py-3 rounded-full text-navy-300 font-semibold inline-flex items-center gap-2">
+                    شاهد جميع الخدمات بالتفصيل
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <div class="section-divider max-w-4xl mx-auto"></div>
 
-    <!-- Social Proof Section -->
-    <section class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-charcoal-950 via-charcoal-900/30 to-charcoal-950"></div>
-        <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <!-- Journey Section -->
+    <section id="journey" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16 scroll-reveal">
-                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">الشهادات والتعاون</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">عملت مع مشاريع ومختصين داخل سوق القهوة والتشغيل والتسويق</h2>
-                <p class="text-charcoal-400 max-w-2xl mx-auto">تعاونت مع علامات تجارية ومشاريع متنوعة في مجال القهوة والتشغيل</p>
+                <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">مسيرتي المهنية</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">من البار للكود</h2>
+                <p class="text-charcoal-400 max-w-2xl mx-auto">خطواتي من وراء الكاونتر لشاشة البرمجة</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center scroll-reveal">
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 1</span>
+            <div class="relative">
+                <div class="absolute right-8 md:right-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-navy-500 via-navy-500/50 to-transparent md:transform md:translate-x-px"></div>
+
+                <div class="space-y-12">
+                    <div class="relative scroll-reveal">
+                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                            <div class="md:text-left pr-20 md:pr-0 md:pl-12">
+                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500 md:border-l-0 md:border-r-4 md:border-r-navy-500">
+                                    <span class="text-navy-300 text-sm font-semibold">المرحلة الأولى</span>
+                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-2">إدارة وتشغيل الكوفيهات</h3>
+                                    <p class="text-charcoal-400 text-sm leading-relaxed">ست سنين داخل سوق القهوة: إدارة فرق، بناء أنظمة، تطوير قوائم، وصيانة مكائن</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="absolute right-4 md:right-1/2 top-6 w-8 h-8 rounded-full bg-charcoal-900 border-4 border-navy-500 md:transform md:translate-x-1/2 z-10"></div>
+                    </div>
+
+                    <div class="relative scroll-reveal">
+                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                            <div class="hidden md:block"></div>
+                            <div class="pr-20 md:pr-0 md:pl-12">
+                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500">
+                                    <span class="text-navy-300 text-sm font-semibold">المرحلة الثانية</span>
+                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-2">بكالوريوس هندسة برمجيات</h3>
+                                    <p class="text-charcoal-400 text-sm leading-relaxed">التخرج بدرجة البكالوريوس، وقرار دمج عالم التقنية ويا خبرة الكوفيهات</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute right-4 md:right-1/2 top-6 w-8 h-8 rounded-full bg-charcoal-900 border-4 border-navy-500 md:transform md:translate-x-1/2 z-10"></div>
+                    </div>
+
+                    <div class="relative scroll-reveal">
+                        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                            <div class="md:text-left pr-20 md:pr-0 md:pl-12">
+                                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-navy-500 md:border-l-0 md:border-r-4 md:border-r-navy-500">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-navy-500/10 border border-navy-500/20 text-navy-300 text-xs font-semibold">
+                                            <span class="w-2 h-2 rounded-full bg-navy-300 animate-pulse"></span>
+                                            الحين
+                                        </span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-charcoal-100 mt-2 mb-2">شريك نجاح + مطوّر + تاجر</h3>
+                                    <p class="text-charcoal-400 text-sm leading-relaxed">شريك بكوفي، تطوير أنظمة مخازن وحسابات، وتجارة معدات — وشبكة علاقات واسعة</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="absolute right-4 md:right-1/2 top-6 w-8 h-8 rounded-full bg-charcoal-900 border-4 border-navy-500 md:transform md:translate-x-1/2 z-10 shadow-lg shadow-navy-500/30"></div>
+                    </div>
                 </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 2</span>
-                </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 3</span>
-                </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 4</span>
-                </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 5</span>
-                </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 6</span>
-                </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 7</span>
-                </div>
-                <div class="brand-logo w-32 h-16 bg-charcoal-800 rounded-xl flex items-center justify-center border border-charcoal-700">
-                    <span class="text-charcoal-500 text-xs font-bold">علامة تجارية 8</span>
-                </div>
+            </div>
+
+            <div class="mt-12 text-center scroll-reveal">
+                <a href="youssef_tayyar_full.html#experience" class="btn-outline px-8 py-3 rounded-full text-navy-300 font-semibold inline-flex items-center gap-2">
+                    شاهد التفاصيل الكاملة للخبرات
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -788,18 +565,20 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16 scroll-reveal">
                 <span class="text-navy-300 text-sm tracking-widest uppercase mb-4 block">ابدأ التعاون</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">تواصل معي</h2>
-                <p class="text-charcoal-400 max-w-2xl mx-auto">إذا كنت تبحث عن شخص يفهم التشغيل والتطوير الحقيقي للمشاريع، تواصل معي.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal-100 mb-4">تواصل وياي</h2>
+                <p class="text-charcoal-400 max-w-2xl mx-auto leading-relaxed">
+                    إذا كنت <strong class="text-navy-300">صاحب كوفي</strong> أو <strong class="text-navy-300">ناوي تفتح كوفي</strong> وتحتاج تعاون بإنشاء المشروع أو تطويره بشكل تقني، أو بتجهيز المعدات، أو تدريب فرق العمل — تواصل وياي
+                </p>
             </div>
 
             <div class="glass-card rounded-3xl p-8 md:p-12 scroll-reveal">
                 <div class="text-center mb-10">
-                    <h3 class="text-2xl font-bold text-charcoal-100 mb-4">جاهز لتحويل مشروعك إلى منظومة ناجحة؟</h3>
-                    <p class="text-charcoal-400">اخنر الطريقة الأنسب للتواصل معي</p>
+                    <h3 class="text-2xl font-bold text-charcoal-100 mb-4">جاهز نشتغل سوية؟</h3>
+                    <p class="text-charcoal-400">اختار الطريقة الأنسب للتواصل</p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-6">
-                    <a href="https://wa.me/966XXXXXXXXX" target="_blank" class="social-btn glass-card rounded-2xl p-6 text-center border border-navy-500/20 hover:border-navy-500/50 group">
+                    <a href="https://wa.me/9647759970186" target="_blank" class="social-btn glass-card rounded-2xl p-6 text-center border border-navy-500/20 hover:border-navy-500/50 group">
                         <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-navy-500/20 transition-colors">
                             <svg class="w-7 h-7 text-navy-300" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -809,7 +588,7 @@
                         <p class="text-charcoal-400 text-sm">تواصل مباشر وسريع</p>
                     </a>
 
-                    <a href="https://instagram.com/" target="_blank" class="social-btn glass-card rounded-2xl p-6 text-center border border-navy-500/20 hover:border-navy-500/50 group">
+                    <a href="https://www.instagram.com/e8d.5/" target="_blank" class="social-btn glass-card rounded-2xl p-6 text-center border border-navy-500/20 hover:border-navy-500/50 group">
                         <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-navy-500/20 transition-colors">
                             <svg class="w-7 h-7 text-navy-300" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -819,7 +598,7 @@
                         <p class="text-charcoal-400 text-sm">تابع آخر المشاريع</p>
                     </a>
 
-                    <a href="mailto:contact@example.com" class="social-btn glass-card rounded-2xl p-6 text-center border border-navy-500/20 hover:border-navy-500/50 group">
+                    <a href="mailto:alalosi55@gmail.com" class="social-btn glass-card rounded-2xl p-6 text-center border border-navy-500/20 hover:border-navy-500/50 group">
                         <div class="w-14 h-14 rounded-full bg-navy-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-navy-500/20 transition-colors">
                             <svg class="w-7 h-7 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -839,13 +618,13 @@
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="text-center md:text-right">
                     <h3 class="text-2xl font-bold navy-gradient-text mb-2">يوسف الطيار</h3>
-                    <p class="text-charcoal-500 text-sm">خبير التشغيل وتطوير المشاريع</p>
+                    <p class="text-charcoal-500 text-sm">مهندس برمجيات & شريك نجاح للكوفيهات</p>
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="#value" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">القيمة</a>
-                    <a href="#trust" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">الثقة</a>
-                    <a href="#experience" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">الخبرة</a>
+                    <a href="#about" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">نبذة</a>
+                    <a href="#network" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">شبكتي</a>
                     <a href="#services" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">الخدمات</a>
+                    <a href="#journey" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">مسيرتي</a>
                     <a href="#contact" class="text-charcoal-500 hover:text-navy-300 transition-colors text-sm">التواصل</a>
                 </div>
             </div>
@@ -855,101 +634,65 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Loading Screen
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loadingScreen').classList.add('hidden');
-            }, 1500);
-        });
-
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-
         mobileMenuBtn.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
         });
-
-        // Close mobile menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Navbar background on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('border-charcoal-800/50');
-            } else {
-                navbar.classList.remove('border-charcoal-800/50');
-            }
-        });
-
-        // Scroll Reveal Animation
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         scrollRevealElements.forEach(el => revealObserver.observe(el));
 
-        // Counter Animation
         const counters = document.querySelectorAll('.counter-value');
-
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const counter = entry.target;
                     const target = parseInt(counter.getAttribute('data-target'));
-                    const duration = 2000;
-                    const step = target / (duration / 16);
-                    let current = 0;
-
-                    const updateCounter = () => {
-                        current += step;
-                        if (current < target) {
-                            counter.textContent = Math.floor(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.textContent = target;
-                        }
-                    };
-
-                    updateCounter();
+                    if (!isNaN(target)) {
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += step;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        updateCounter();
+                    }
                     counterObserver.unobserve(counter);
                 }
             });
         }, { threshold: 0.5 });
-
         counters.forEach(counter => counterObserver.observe(counter));
 
-        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Parallax Effect for Floating Shapes
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
             const shapes = document.querySelectorAll('.floating-shape');
